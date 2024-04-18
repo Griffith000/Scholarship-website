@@ -1,0 +1,159 @@
+body{
+   
+    background-color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.hero {
+    position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      object-fit: cover;
+      padding-top: 4%;
+      padding-bottom: 3%;
+      opacity: 1;
+      
+    }
+    .hero::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom:0px;
+        left: 0px;
+        right: 0px;
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("../img/graduation.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        
+    }
+     .hero h1,h3{
+        position: relative;
+        text-align: center;
+    }
+    .hero h1{
+      color:rgb(255, 255, 255);
+        font-weight: bold;
+        font-size:70px;
+        font-family: 'Times New Roman', Times, serif;
+        align-self:flex-end;
+        
+ }
+  .hero h3 {
+    color:rgb(235, 235, 235);
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ .logo{
+  position: relative;
+  width: 10vh;
+  height: 10vh;
+  margin: 5px ;
+  margin-left: 100px;
+  border-radius: 40px;
+  top: -3px;
+ 
+}
+nav{
+/* position: fixed; */
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  /*margin-top: 5px;*/
+  /* backdrop-filter: blur(10px); */
+  z-index: 10;
+  top: 0px;
+  width: 100%;
+  height: 11vh;
+  /* background-color: rgba(44, 44, 44, 0.44);
+  border-bottom: 1px solid rgb(255, 160, 122); */
+  margin-right: 2rem;
+  
+}
+.hamburger{
+display: none;
+position: absolute;
+top: -1px;
+
+}
+nav{
+  /* position: fixed; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*margin-top: 5px;*/
+    /* backdrop-filter: blur(10px); */
+    z-index: 10;
+    top: 0px;
+    width: 100%;
+    height: 11vh;
+    /* background-color: rgba(44, 44, 44, 0.44);
+    border-bottom: 1px solid rgb(255, 160, 122); */
+    margin-right: 2rem;
+    
+}
+
+.nav-links {
+ width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 35px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: rgba(255, 255, 255, 0.385);
+  text-decoration: none;
+  font-size: 19px;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgb(255, 160, 122);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+@media (max-width: 890px) {
+.hideNavLink{
+  display: none;
+}
+
+}
+
+ /* ul li {
+  margin: 1rem;
+  font-size: 1.5rem;
+ }
+ ul{
+  margin: 1.5rem;
+ } */
+ .container{
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
