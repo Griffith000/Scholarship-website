@@ -166,7 +166,7 @@ h3 {
   position: fixed;
   display: none;
   backdrop-filter: blur(4px);
-  background-color: #d2865df0;
+  background-color: #d2865d;
   padding-top: 2.9rem;
   top: 0px;
   right: 0px;
@@ -778,7 +778,8 @@ footer {
   padding: 10px;
   background: #3d545f;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1085px) {

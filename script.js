@@ -24,6 +24,19 @@ window.addEventListener("load", () => {
    
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
+
+//this code handles the appearance of the menu BACK TO TOP  button
+window.onscroll = function()
+{
+    if(window.scrollY >= 550)
+    {
+        document.querySelector('.back-to-top').style.visibility="visible"
+        // document.querySelector('.back-to-top-span').style.visibility="visible"
+    }else
+    {
+        document.querySelector('.back-to-top').style.visibility="hidden";
+    }
+};
 //this code handles the sidebar on mobile vue
 const sidebar = document.querySelector(".sidebar");
     function showMenu() {

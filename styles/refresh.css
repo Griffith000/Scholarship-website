@@ -47,7 +47,9 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .back-to-top {
+  /* visibility: hidden; */
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -59,8 +61,13 @@ html {
   padding: 0.75rem;
   text-decoration: none;
   transition: 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
+/* .material-icons
+{
+  visibility: hidden;
+} */
 .back-to-top span {
   color: #962525;
   font-size: 3rem;
@@ -68,17 +75,18 @@ html {
   padding: 0.25rem;
 }
 
-.back-to-top:hover {
-  background-color: #d2865d;
-}
 .back-to-top:hover span {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 .hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
+  transition: all 1s;
+}
+.hidden2 {
+  opacity: 0;
   transition: all 1s;
 }
 .show {
