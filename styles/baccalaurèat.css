@@ -26,7 +26,7 @@ body {
   left: 0px;
   right: 0px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("../img/graduation.jpg");
+    url("../img/master-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -68,7 +68,6 @@ nav {
   top: 0px;
   width: 100%;
   height: 11vh;
-
   margin-right: 2rem;
 }
 .hamburger {
@@ -80,10 +79,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
   z-index: 10;
   top: 0px;
   width: 100%;
   height: 11vh;
+
   margin-right: 2rem;
 }
 
@@ -122,6 +123,32 @@ nav {
   .hideNavLink {
     display: none;
   }
+}
+@media only screen and (max-width: 700px) {
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 14vh;
+    height: 14vh;
+    border-radius: 50px;
+    top: 2rem;
+  }
+  .hamburger {
+    display: block;
+    margin-top: 1rem;
+  }
+  .container{
+    width: auto;
+  }
+  .main{
+   
+    flex-direction: column;
+    margin: 2rem;
+  }
+  
 }
 .sidebar {
   position: fixed;
@@ -169,15 +196,16 @@ h3 {
   color: #31363f;
   font-size: 1.5rem;
 }
-.close-menu {
-  scale: 1.05;
-}
+
 .nav-links-mobile li :hover {
   scale: 1.1;
   color: rgb(180, 173, 173);
 }
 .container {
-  margin-top: 3rem;
+  
+  margin-top: 4.4rem;
+  height: 80%;
+  
   padding: 1.5rem;
   border: 2px solid lightgray;
   border-radius: 10px;
@@ -185,7 +213,70 @@ h3 {
   background-color: whitesmoke;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.bource .link a {
+  margin-right: 1rem;
+}
+a .material-symbols-outlined{
+  margin-left: 2rem; 
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 1.7rem;
+}
+a .material-symbols-outlined:hover{
+  transform: translateX(7px);
+  
+}
+ul{
+  list-style: none;
+  
+}
+.container ul li{
+  display: flex;
+  gap: 10px;
+  margin: 7px;
 
+}
+.liste-bource ul{
+
+  display: flex;
+  flex-direction: column;
+   width: 80%;
+   gap: 10px;
+}
+main .liste-bource h2{
+  margin: 2rem;
+  font-size: 1.8rem;
+  
+}
+.bource .link{
+  display: flex;
+}
+.bource{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: #31363f;
+  background-color: white;
+  font-weight: bold;
+  align-items: center;
+
+}
+main{
+  display: flex;
+  gap:6rem;
+}
+ul{
+  list-style: none;
+  
+}
+ul li{
+  display: flex;
+  gap: 10px;
+  margin: 7px;
+
+}
 footer .footer-bottom .bar {
   height: 2px;
   width: auto;

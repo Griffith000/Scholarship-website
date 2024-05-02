@@ -10,7 +10,7 @@
 }
 
 .container {
-  animation: refresh 0.75s;
+  animation: refresh 1s;
 }
 
 .loader {

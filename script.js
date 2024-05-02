@@ -41,7 +41,7 @@ window.onscroll = function()
 const sidebar = document.querySelector(".sidebar");
     function showMenu() {
         sidebar.style.right = "0";
-        sidebar.style.display="block";
+        sidebar.style.display="flex";
     }
     function hideMenu() {
       sidebar.style.right = "-250px";
