@@ -1,50 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
     <link rel="stylesheet" href="./styles/formulaire.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
+
 <body>
     <h2 class="heading hidden">Inscription à la bource d'èducation à l'Étranger</h2>
     <section class="registration-form">
-        <div ><img class="formImg" src="img/smiley-friends-doing-homework-outdoors.jpg" alt=""></div>
+        <div><img class="formImg" src="img/smiley-friends-doing-homework-outdoors.jpg" alt=""></div>
         <form action="">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom">
-            <label for="prènom">Prènom:</label>
-            <input type="text" id="prènom">
-            <label for="age">Age:</label>
-            <input type="text" id="age">
-            <label for="Nationalitè">Nationalitè:</label>
-            <input type="text" id="Nationalitè">
+            <div class="input-field">
+                <input type="text" required>
+                <label>Entrer vos nom</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required>
+                <label>Entrer vos prènom</label>
+            </div>
+
+            <div class="input-field">
+                <input type="password" required>
+                <label>Age</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required>
+                <label>Nationalitè</label>
+            </div>
+
             <label for="">Sexe:</label>
-            <select id="pet-select">
-                <option value="homme">Homme</option>
-                <option value="femme">Femme</option>
-                <option value="autre chose">Autre chose</option>
+
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">homme</option>
+                <option value="2">femme</option>
+                <option value="3">autre chose</option>
             </select>
-    
-            <label for="cv">CV : (pdf)</label>
-            <input type="file"  id="cv">
-            <label for="diplome">Diplome :(pdf)</label>
-            <input type="file"  id="diplome">
-            <label for="image">Image personnelle :(pdf)</label>
-            <input type="file"  id="image">
-            <label for="certif">Certificat:(pdf)</label>
-            <input type="file"  id="certif">
-            <div>
+
+
+            <div class="mb-3">
+                <label for="formFileSm" class="form-label">CV:</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+            <div class="mb-3">
+                <label for="formFileSm" class="form-label">Diplome :(pdf)</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+            <div class="mb-3">
+                <label for="formFileSm" class="form-label">Image personnelle :(pdf)</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+            <div class="mb-3">
+                <label for="formFileSm" class="form-label">Certificat:(pdf)</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+            <div class="conditions">
+
                 <input class="checkbox" type="checkbox" id="conditions">
                 <span class="checkmark">Accepter les conditions</span>
             </div>
-            <input  class="submit" type="submit" value="Envoyer">
+            <input class="submit" type="submit" value="Envoyer">
             <footer>
                 <p>&copy; Copyright 2024. All Rights Reserved.</p>
             </footer>
         </form>
     </section>
-    
+
 </body>
+
 </html>

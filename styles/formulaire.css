@@ -1,54 +1,88 @@
-form{
-    display: grid;
-    padding: 30px;
-    
-    gap: 10px 0px;
-    color: whitesmoke;
-    
-    
-  }
-  form label{
-    margin-right: -100px;
-  }
-  .registration-form{
-    
-    background-color: rgba(0, 0, 0, 0.788);
-    display: grid;
-    grid-template-columns: 2fr 2fr ;
-    grid-template-rows: 1fr;
-    gap: 0px 10px;
-    color: whitesmoke;
-    
-    
-  }
-  .formImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  /* div .formImg{
-    height: 70%;
-  } */
-  select,input{
-    width: 50%;
-    border-radius: 3px;
-    border: 1px solid rgb(76, 76, 76);
-     min-width: 100px; 
-     padding: 4px;
-     background-color: whitesmoke;
-     font-size: medium;
-   
-  } 
-  .checkbox{
-    width: 5px;
-    margin: -5px -5px;
-  }
-  .checkmark{
-    margin-top: 10px;
-    margin-left: -20px;
-  }
+.heading {
+  margin: 0.7rem;
+}
+body {
+  background-color: whitesmoke;
+}
+form {
+  display: grid;
+  padding: 30px;
+  gap: 0px 0px;
+  color: whitesmoke;
+}
 
+.registration-form {
+  background-color: rgba(0, 0, 0, 0.788);
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 0px 10px;
+  color: whitesmoke;
+}
+.formImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
- 
-    
+select,
+input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgb(76, 76, 76);
+  min-width: 100px;
+  padding: 4px;
+  background-color: whitesmoke;
+  font-size: medium;
+}
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+}
+.checkmark {
+  margin-top: 10px;
+  /* margin-left: -20px; */
+}
+.submit {
+  justify-self: center;
+}
+.conditions {
+  display: flex;
+
+  justify-content: baseline;
+  align-items: baseline;
+}
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
