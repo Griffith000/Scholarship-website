@@ -14,7 +14,6 @@
   height: 100vh;
   background: #fff; /* or any color you prefer */
   z-index: 9999; /* this ensures the loader is on top of everything else */
-  
 }
 
 body {
@@ -84,8 +83,8 @@ h2 {
   color: #fff;
 }
 
-.input-field input:focus~label,
-.input-field input:valid~label {
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
   font-size: 0.8rem;
   top: 10px;
   transform: translateY(-120%);

@@ -1,4 +1,3 @@
-
 // loading spinner animation currently removed --OPTIMIZED--
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
@@ -30,7 +29,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 //this code handles the appearance of the menu BACK TO TOP  button --OPTIMIZED--
 // Function to check scroll position and adjust visibility of back to top button
 function checkScroll() {
-  if (window.scrollY >= 800) {
+  if (window.scrollY >= 900) {
     document.querySelector(".back-to-top").style.visibility = "visible";
   } else {
     document.querySelector(".back-to-top").style.visibility = "hidden";
@@ -57,9 +56,11 @@ function hideMenu(event) {
   event.preventDefault();
   sidebar.style.right = "-250px";
 }
-document.querySelector('.close-menu').addEventListener('click', function(event) {
-  hideMenu(event);
-});
+document
+  .querySelector(".close-menu")
+  .addEventListener("click", function (event) {
+    hideMenu(event);
+  });
 // this code handles the image slider
 const initSlider = () => {
   const imageList = document.querySelector(".slider-wrapper .image-list");
@@ -142,3 +143,14 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
+// this code handles the google translate api
+
+// window.onload = function() {
+//   var checkExist = setInterval(function() {
+//     if (window.google && google.translate && google.translate.TranslateElement) {
+//       new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_element');
+//       clearInterval(checkExist);
+//     }
+//   }, 100); // check every 100ms
+// };
