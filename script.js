@@ -1,13 +1,15 @@
 
-// loading spinner animation currently removed
+// loading spinner animation currently removed --OPTIMIZED--
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
 
-  loader.classList.add("loader--hidden");
+  setTimeout(() => {
+    loader.classList.add("loader--hidden");
 
-  loader.addEventListener("transitionend", () => {
-    document.body.removeChild(loader);
-  });
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  }, 1300); // delay of 1.3 seconds
 });
 
 // this code handles the scrolling animation
@@ -25,24 +27,39 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-//this code handles the appearance of the menu BACK TO TOP  button
-window.onscroll = function () {
-  if (window.scrollY >= 550) {
+//this code handles the appearance of the menu BACK TO TOP  button --OPTIMIZED--
+// Function to check scroll position and adjust visibility of back to top button
+function checkScroll() {
+  if (window.scrollY >= 800) {
     document.querySelector(".back-to-top").style.visibility = "visible";
-    // document.querySelector('.back-to-top-span').style.visibility="visible"
   } else {
     document.querySelector(".back-to-top").style.visibility = "hidden";
   }
-};
-//this code handles the sidebar on mobile vue
+}
+
+// Call checkScroll function when page is loaded
+window.onload = checkScroll;
+
+// Call checkScroll function when user scrolls
+window.onscroll = checkScroll;
+
+//this code handles the sidebar on mobile vue --OPTIMIZED--
 const sidebar = document.querySelector(".sidebar");
+
 function showMenu() {
   sidebar.style.right = "0";
-  sidebar.style.display = "flex";
 }
+
 function hideMenu() {
   sidebar.style.right = "-250px";
 }
+function hideMenu(event) {
+  event.preventDefault();
+  sidebar.style.right = "-250px";
+}
+document.querySelector('.close-menu').addEventListener('click', function(event) {
+  hideMenu(event);
+});
 // this code handles the image slider
 const initSlider = () => {
   const imageList = document.querySelector(".slider-wrapper .image-list");

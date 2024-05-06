@@ -8,6 +8,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff; /* or any color you prefer */
+  z-index: 9999; /* this ensures the loader is on top of everything else */
+  
+}
 .hero {
   position: relative;
   width: 100%;
@@ -139,6 +149,8 @@ nav {
   .hamburger {
     display: block;
     margin-top: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
   }
   .container{
     width: auto;
@@ -146,24 +158,23 @@ nav {
   .main{
    
     flex-direction: column;
-    margin: 2rem;
+    /* margin: 2rem; */
   }
   
 }
 .sidebar {
   position: fixed;
-  display: none;
   backdrop-filter: blur(4px);
   background-color: #d2865d;
   padding-top: 2.9rem;
   top: 0px;
-  right: 0px;
+  right: -250px; /* initially position the sidebar off the screen */
   bottom: 0px;
   width: 250px;
   z-index: 8888;
   transition: right 0.5s ease-in-out;
-  animation-duration: 0.5s;
   box-shadow: 2px 3px 5px #a0a0a0;
+  display: flex; /* always keep the sidebar as a flex container */
 }
 .nav-links-mobile ul {
   text-decoration: none;
@@ -198,7 +209,7 @@ h3 {
 }
 
 .nav-links-mobile li :hover {
-  scale: 1.1;
+  
   color: rgb(180, 173, 173);
 }
 .container {
@@ -265,7 +276,7 @@ main .liste-bource h2{
 }
 main{
   display: flex;
-  gap:6rem;
+  /* gap:6rem; */
 }
 ul{
   list-style: none;
@@ -283,6 +294,146 @@ footer .footer-bottom .bar {
 
   color: lightgray;
 }
-footer {
+/* footer {
   margin: 1rem;
+} */
+/* footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+} */
+
+.body-content {
+  width: 100%;
+  padding: 20px;
+  text-align: justify;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.new-footer .footer {
+  width:100vw;
+ 
+  background: #00121b;
+  display: block;
+}
+
+.inner-footer {
+  width: 95%;
+  margin: auto;
+  padding: 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.footer-items {
+  width: 25%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.new-footer h1 {
+  padding: 10px 0;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-items p {
+  color: grey;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.new-footer h2 {
+  margin: 10px 0;
+  color: grey;
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.border {
+  height: 2px;
+  width: 40px;
+  background: #d2865d;
+}
+
+.new-footer ul {
+  list-style: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.new-footer ul a {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  transition: transform 0.3s;
+  transition-delay: 0.5s; /* adjust this value as needed */
+}
+
+.new-footer ul a:hover {
+  color: #d2865d;
+  transform: scale(1.1);
+  transition-delay: 0s;
+}
+
+.new-footer ul li {
+  margin: 10px 0;
+  height: 25px;
+}
+
+.new-footer li i {
+  margin-right: 20px;
+}
+
+.social-media {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.social-media a {
+  text-decoration: none;
+}
+
+.social-media i {
+  height: 15px;
+  width: 15px;
+  margin: 20px 5px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid grey;
+  transition: 0.3s;
+}
+
+.social-media i:hover {
+  background: grey;
+}
+
+.footer-bottom {
+  padding: 10px;
+  background: #3d545f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1085px) {
+  .footer-items {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-items {
+    width: 100%;
+  }
 }

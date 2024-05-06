@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>SignUp</title>
   <link rel="stylesheet" href="styles/login.css">
   <link rel="stylesheet" href="styles/refresh.css">
 </head>
@@ -11,26 +11,34 @@
     <div class="loader"></div>
   <div class="wrapper">
     <form action="#">
-      <h2>Se connecter</h2>
+      <h2>S'inscrire</h2>
         <div class="input-field">
         <input type="text" required>
-        <label>Entez votre email</label>
+        <label>Prènom</label>
+      </div>
+      <div class="input-field">
+        <input type="text" required>
+        <label>Nom de famille</label>
+      </div>
+      <div class="input-field">
+        <input type="email" required>
+        <label>E-mail</label>
       </div>
       <div class="input-field">
         <input type="password" required>
-        <label>Entez votre mot de passe</label>
+        <label>Mot de passe</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>Confirmez le mot de passe</label>
       </div>
       <div class="forget">
         <label for="remember">
           <input type="checkbox" id="remember">
-          <p>Souviens-toi de moi</p>
+          <p>Accepter les termes et conditions</p>
         </label>
-        <a href="#">Mot de passe oubliè?</a>
       </div>
-      <button type="submit">Se connecter</button>
-      <div class="register">
-        <p>Vous n'avez pas de compte? <a href="signup.html">S'inscrire</a></p>
-      </div>
+      <button type="submit">Sign Up</button>
     </form>
   </div>
   <script src="script.js"></script>

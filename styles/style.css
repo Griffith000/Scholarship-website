@@ -9,6 +9,15 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff; /* or any color you prefer */
+  z-index: 9999; /* this ensures the loader is on top of everything else */
+}
 
 .logo {
   position: relative;
@@ -176,28 +185,19 @@ h3 {
   color: black;
 }
 
-.partenaires {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 3rem;
-  border-bottom: 2px solid rgb(162, 161, 161);
-}
 .sidebar {
   position: fixed;
-  display: none;
   backdrop-filter: blur(4px);
   background-color: #d2865d;
   padding-top: 2.9rem;
   top: 0px;
-  right: 0px;
+  right: -250px; /* initially position the sidebar off the screen */
   bottom: 0px;
   width: 250px;
   z-index: 8888;
   transition: right 0.5s ease-in-out;
-  animation-duration: 0.5s;
   box-shadow: 2px 3px 5px #a0a0a0;
+  display: flex; /* always keep the sidebar as a flex container */
 }
 .nav-links-mobile ul {
   text-decoration: none;
@@ -231,10 +231,10 @@ h3 {
   font-size: 1.5rem;
 }
 .close-menu {
-  scale: 1.05;
+  /* s */
 }
 .nav-links-mobile li :hover {
-  scale: 1.1;
+  scale: 1.12;
   color: rgb(180, 173, 173);
 }
 
@@ -424,13 +424,9 @@ h3 {
     top: 2rem;
   }
   .diplomes-row {
-    /* display: flex;
-    flex-direction: column; */
+    grid-template-columns: 1fr;
   }
-  .degree-col {
-    width: 80%;
-    margin-top: 8rem;
-  }
+
   .hero h3 {
     font-size: 1rem;
   }
@@ -447,37 +443,48 @@ h3 {
   .testimonial-row {
     flex-direction: column;
   }
+  .degree-col {
+    font-size: 16px; /* adjust as needed */
+  }
+  .degree-col img {
+    width: 80%; /* adjust as needed */
+    margin: 0 auto; /* center the image */
+  }
+  .layer h3 {
+    font-size: 20px; /* adjust as needed */
+    top: 30%; /* adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
-@media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
   nav {
     height: 15vh;
   }
 
   .diplomes-row {
-    margin: auto 5rem;
-    /* grid-template-columns: 3fr; */
-    /* grid-template-rows: repeat(3,1fr); */
-    /* display: flex;
-    flex-direction: column; */
+    grid-template-columns: 1fr;
   }
 
   .testimonial-row {
     flex-direction: column;
   }
 
-  a .degree-col {
-    margin: 1rem auto;
+  .degree-col {
+    font-size: 14px; /* adjust as needed */
   }
   .degree-col:hover img {
     scale: 1;
   }
+  .degree-col img {
+    width: 70%; /* adjust as needed */
+    margin: 0 auto; /* center the image */
+  }
   .layer h3 {
-    font-size: 10px;
-    top: 20%;
-    /* bottom: 10%; */
-    left: 60%;
+    font-size: 18px; /* adjust as needed */
+    top: 30%; /* adjust as needed */
+    left: 50%;
     transform: translateX(-50%);
-    position: absolute;
   }
 }
 .diplomes-offerts {
@@ -485,24 +492,16 @@ h3 {
   border-bottom: 2px solid rgb(162, 161, 161);
 }
 .diplomes-row {
-  /* display: flex;
-  justify-content: space-around; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: auto;
+  gap: 0px;
+
+  margin: 1rem;
 }
 .diplomes-offerts h3 {
   color: #35383e;
   text-align: center;
 }
-/* .degree-col {
-  flex-basis: 32%;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  position: relative;
-  overflow: hidden;
-  margin: 1rem 3rem;
-} */
 
 .degree-col img {
   width: 100%;
@@ -513,10 +512,12 @@ h3 {
 }
 a .degree-col {
   border-radius: 10px;
-  margin-bottom: 30px;
+
   position: relative;
   overflow: hidden;
-  margin: 1rem 3rem;
+  margin: 0.8rem;
+  justify-self: center;
+  align-self: center;
 }
 .degree-col:hover img {
   scale: 1;
@@ -545,7 +546,7 @@ a .degree-col {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  position: absolute;
+
   opacity: 0;
   transition: 0.5s;
 }
@@ -553,12 +554,6 @@ a .degree-col {
 .layer:hover h3 {
   bottom: 49%;
   opacity: 1;
-}
-
-.container3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /*-------------------Testimonial section start-------------------*/
